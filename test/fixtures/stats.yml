@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  button_id: 1
+  high_scorer_name: MyString
+  high_score: 1
+  times_played: 1
+
+two:
+  button_id: 1
+  high_scorer_name: MyString
+  high_score: 1
+  times_played: 1

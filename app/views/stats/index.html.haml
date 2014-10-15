@@ -1,0 +1,37 @@
+
+-@stats.each do |stat|
+  - number = stat.button_id
+  %p{id: "button_#{number}_stats"}
+    High Score:
+    %span.high-score= stat.high_score
+    %br
+    By:
+    %span.high-scorer= stat.high_scorer_name
+    %br
+    Game Played:
+    %span.times-played= stat.times_played
+  %button{id: "button_#{number}"} Button #{number}
+  %p{id: "button_#{number}_high_score"}
+    = stat.high_score
+  %p{id: "current_score_#{number}"}
+    0
+
+
+%p#current_score_setting
+  Current Score: 
+
+
+%script
+  var button1 = document.getElementById("button_1");
+  button1.addEventListener('mousedown', onMouseDown1);
+
+  var button2 = document.getElementById("button_2");
+  button2.addEventListener('click', onMouseClick2);
+
+  var button3 = document.getElementById("button_3");
+  button3.addEventListener('mousedown', onMouseDown3);
+  window.addEventListener('load', onLoadFunction);
+
+
+
+
